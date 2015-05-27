@@ -1,0 +1,31 @@
+<?php //events LATVIAN
+
+return array(
+    'SELECT_EVENT_TYPE' => 'Izvēlies notikuma veidu',
+    'EVENT_TYPE' => 'Notikuma veids',
+    'SPECIAL_DAYS' => 'Īpašās dienas',
+    'STUDIES' => 'Mācības',
+    'ENTERTAINMENT' => 'Izklaide',
+    'OTHER' => 'Cits',
+    'NAMES_DAY' => 'Vārda diena',
+    'BIRTHDAY' => 'Dzimšanas diena',
+    'ANIVERSARY' => 'Gadadiena',
+    'LECTURE' => 'Lekcija',
+    'TEST' => 'Kontroldarbs',
+    'HOME_WORK' => 'Mājas darbs',
+    'CINEMA' => 'Kino',
+    'CONCERT' => 'Koncerts',
+    'PARTY' => 'Ballīte',
+    'MEETING' => 'Tikšanās',
+    'HOLIDAY' => 'Brīvdiena',
+    'EVENTS' => 'Notikumi',
+    'NEW_EVENT' => 'Jauns notikums',
+    'MONDAY' => 'Pirmdiena',
+    'TUESDAY' => 'Otrdiena',
+    'WEDNESDAY' => 'Trešdiena',
+    'THURSDAY' => 'Ceturtdiena',
+    'FRIDAY' => 'Piektdiena',
+    'SATURDAY' => 'Sestdiena',
+    'SUNDAY' => 'Svētdiena',
+    );   
+

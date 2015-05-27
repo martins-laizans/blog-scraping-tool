@@ -1,0 +1,281 @@
+html, body{
+    background-color: grey;
+     height:95%;
+}
+
+img {max-height:100px; width:auto;}
+.id, .ids {color:green;}
+.classes {color:#08C;}
+.tag {color:GoldenRod;}
+.taken-out {text-decoration:line-through}
+.button{padding:10px; background-color:lightgray; border:1px solid black; margin:20px 0 20px 15px; display:inline-block; cursor:pointer;}
+#selected_item_options{border:1px solid black; zIndex:10; background-color:white; position:fixed; padding:20px;}
+#do-it{float:left; background-color:lightgreen;}
+.container{
+    margin-top:5px;
+    background-color: white;
+    padding-left:20px;
+    padding-right:20px;
+    display:block;
+}
+#peopleUsingList p{
+    margin-bottom: 40px;
+}
+#event-selector{
+    padding:4px 20px 8px 20px;
+    border:1px solid grey;
+    border-radius: 2em;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+#calendarTable .date {
+    border-radius: 1em;
+    margin-top:3px;
+    margin-right:3px;
+    color:black;
+    font-size:105%;
+    display: inline-block;
+    float:right;
+}
+
+#calendarTable .weekend
+{
+    color:green;
+}
+
+#calendarTable .specialDay .date {
+    margin: 0px;
+    /*margin-right: 1px;*/
+}
+
+#calendarList .date {
+    padding:3px;
+    padding-right: 30px;
+    font-size:105%;
+    border-bottom:1px solid black;
+    display: inline-block;
+}
+
+#calendarList li{
+    padding-left: 40px;
+}
+
+.eventIcons{
+    clear:both;
+    float: right;
+}
+
+.greyBackground{
+    background-color: grey;
+}
+
+.done
+{
+    text-decoration: line-through;
+}
+i{
+    /*margin-left: 5px;*/
+}
+.mouseOverP p:hover{
+    
+    color: rgb(0, 136, 204);
+    
+}
+.left10{
+    margin-left: 10px;
+}
+.dateCell, .TableMenu{
+/*    border: 1px solid black;
+    border-radius: 2em;*/
+    height: 100px;
+    padding:0;
+    text-align:right;
+    vertical-align: top;
+    padding-top: 5px;
+    padding-right: 5px;
+}
+.dateCell div
+{
+    overflow: hidden;
+    height: 100px;
+}
+.dateCell p
+{
+    margin: 0;
+}
+
+.dayOfWeekCell
+{
+    font-weight: bold;
+    text-align: center;
+    height:15px;
+    background-color:rgb(220,220,220);
+    /*width:100px;*/
+}
+.today{
+    background-color:greenyellow;
+}
+.other_year{
+    /*background-color:gainsboro;*/
+    background-color:lightgreen;
+}
+.otherMonthDay{
+    background-color:rgb(240,240,240);
+}
+
+#calendarTable
+{
+   width: 100%;
+   table-layout:fixed; width:820px; overflow:hidden; word-wrap:break-word;
+}
+
+#calendarTable { border-collapse: separate ; }
+#calendarTable td { border: solid 1px rgb(140,140,140)}
+#calendarTable tr:first-child td:first-child { border-top-left-radius: 10px;}
+#calendarTable tr:first-child td:last-child { border-top-right-radius: 10px; }
+#calendarTable tr:last-child td:first-child { border-bottom-left-radius: 10px; }
+#calendarTable tr:last-child td:last-child { border-bottom-right-radius: 10px; }
+
+.table_first_column_right_align td{
+    text-align:right;
+}
+
+.TableMenu{
+    padding:0;
+    height:105px;
+    /*width: 115px;*/
+    width: 109px;
+}
+.dayHover{
+    background-color: lightcyan;
+}
+
+#goToPreviousMonth, #goToNextMonth, #dayMenu, #dayEmptyMenu, #loading{
+    display:inline-block;
+    position:absolute;
+    top:100px;
+    left:50px;
+}
+
+#dayMenu, #dayEmptyMenu{
+    z-index: 100;
+    background-color: grey;
+}
+#dayMenuTable, #emptyDayMenuTable
+{
+    width:100%;
+    height: 100%;
+    color:white;
+}
+
+#dayMenuTable tr:first-child td:first-child { width: 53px; border-right:1px solid rgb(100,100,100); border-bottom:1px solid rgb(100,100,100); text-align: center;}
+#dayMenuTable tr:first-child td:last-child { border-left:1px solid rgb(100,100,100); border-bottom:1px solid rgb(100,100,100); text-align: center;}
+#dayMenuTable tr:last-child td:first-child { border-right:1px solid rgb(100,100,100); text-align: center;}
+#dayMenuTable tr:last-child td:last-child { border-left:1px solid rgb(100,100,100); text-align: center;}
+
+ 
+#emptyDayMenuTable tr:first-child td:first-child { width: 53px; border-right:1px solid rgb(100,100,100); text-align: center;}
+#emptyDayMenuTable tr:first-child td:last-child { border-left:1px solid rgb(100,100,100); text-align: center;}
+
+#dayMenuTable td{
+    border:none;
+    height:50px;
+}
+
+#emptyDayMenuTable td{
+    border:none;
+    height:103px;
+}
+
+.namesDay, .dateText{
+    display: inline-block;
+}
+.namesDay{
+    clear:both;
+    float:right;
+    color:grey;
+    font-size: 10px;
+}
+
+.oldSchool, .oldSchool a{ 
+    color:lightgray;
+}
+.calendarIcons{
+    position: absolute;
+    bottom: 5px; /* bottom refers to positioned ancestor bottom, here the table bottom */
+    left: auto; /* auto position is calculated by browser, usually the same as the in flow position */
+    margin-left: 0; /* optional, use margin to control left position according to the given position */
+}
+.linkButtonSmall, .linkButtonBig{
+    display: block;
+    height:100%;
+}
+
+.linkButtonSmall i{
+    margin-top:14px;
+}
+
+.linkButtonBig i{
+    margin-top:42px;
+}
+#dayMenuTable td :hover, #emptyDayMenuTable td :hover {
+    background-color: lightgray;
+}
+
+.specialDay .date{
+    padding:3px 5px;
+/*    padding-right: 5px;*/
+    
+}
+
+#s0Sample, #s1Sample, #s2Sample, #s3Sample, #s4Sample, #s5Sample {
+    border-radius: 1em;
+    padding:3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    color:black;
+    font-size:105%;
+    display: inline-block;
+}
+
+#s1Sample, .special1 .date{
+    border:1px solid red;
+}
+
+#s2Sample, .special2 .date{
+    border:1px dotted blue;
+}
+
+#s3Sample, .special3 .date{
+    border:1px dotted black;
+}
+
+#s4Sample, .special4 .date{
+    border:1px dotted purple;
+}
+
+#s5Sample, .special5 .date{
+    border:1px dotted yellowgreen;
+}
+.specialError .date
+{
+    color:red; font-size: 20px;
+}
+
+tr.secondDuplicateLine > td{
+    padding-bottom: 10px;
+}
+
+#year_dropdown{
+    width:80px;
+}
+#month_dropdown{
+    width:120px;
+}
+#date_dropdown{
+    width:60px;
+}
+
+#user_image_wrap img{
+    margin-right: 10px; 
+}

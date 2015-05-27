@@ -1,0 +1,82 @@
+﻿cd C:\wamp\www\parser
+php oil -v
+php oil refine migrate:up
+
+//generate without timestamps created/edited at
+php oil g ... --no-timestamp
+php oil g model users username:varchar[50] password:varchar[255] group:int email:varchar[255] last_login:varchar[25] login_hash:varchar[255] profile_fields:text created:int --no-timestamp
+php oil g controller auth login_simpleauth
+php oil g view auth login_simpleauth
+-------------------------------------
+
+php oil g scaffold blog url:varchar[255] status:int crawldate:date
+php oil g scaffold archive blogid:int elementid:int element:varchar[100] --no-timestamp
+php oil g scaffold articleexclude blogid:int ruleid:int element:varchar[100] --no-timestamp
+php oil g scaffold article blogid:int author:varchar[100]:null url:varchar[255] published:date:null crawled:date:null --no-timestamp
+php oil generate migration add_title_to_articles title:varchar[200]
+php oil generate migration add_offset_to_articleexcludes offset:int:null
+php oil generate migration add_length_to_articleexcludes length:int:null
+
+php oil g model paragraph text:varchar[2000] articleid:int symbols:int spaces:int --no-timestamp
+php oil g model paragraphlang paragraphid:int language:char[2] probability:float(3,2) --no-timestamp
+php oil g model comment text:varchar[1000] articleid:int author:varchar[100] --no-timestamp
+
+php oil g model users username:varchar[50] password:varchar[255] group:int email:varchar[255] last_login:varchar[25] login_hash:varchar[255] profile_fields:text created:int --no-timestamp
+:null
+
+
+
+
+
+
+
+
+
+
+
+php oil g scaffold todolist user_id:int title:varchar[50] category:int from_date:date to_date:date
+
+php oil g scaffold todoitem todolist_id:int title:varchar[50] done:bool
+
+php oil g controller overview
+
+php oil g model log user_id:int action:varchar[30] ip:varchar[45] added:datetime browser:varchar[30] --no-timestamp
+
+php oil generate migration create_namesdays month:int day:int names:string[60]
+php oil g model namesdays month:int day:int names:string[60] --no-migration
+
+$ php oil generate migration create_eventtype icon:string[25] color:string[11]
+
+php oil g scaffold birthdaysetc event_id:int, description:varchar[50] month:string[2] date:string[2] user_id:int source_id:int show:bool --no-timestamp
+
+php oil g scaffold synclinks calendar_type_id:int, link:varchar[255] user_id:int, last_sync:int
+
+php oil g model special user_id:int border_id:int date:datetime --no-timestamp
+
+php oil g controller settings profile
+
+php oil generate migration create_login user_id:int outside_system_id:int outside_user_id:int
+
+php oil generate migration add_friend_id_to_birthdaysetcs friend_id:int
+php oil generate migration add_year_to_birthdaysetcs year:int
+
+php oil generate migration delete_username_from_users username:varchar[50]
+php oil generate migration delete_password_from_users password:varchar[255]
+
+php oil g model authlog user_id:int session:varchar[32] ip:varchar[45] started:datetime browser:varchar[30] --no-timestamp
+php oil generate migration delete_browser_from_logs browser:varchar[30]
+php oil generate migration delete_ip_from_logs ip:varchar[45]
+php oil generate migration add_sessionid_to_logs session_id:int
+
+php oil generate migration create_logdescription action_id:int description:string[100]
+
+php oil g scaffold categories category:int, description:varchar[60], user_id:int --no-timestamp
+
+php oil generate migration add_category_to_birthdaysetcs category:int
+php oil generate migration add_category_to_events category:int
+
+php oil g scaffold reminders reminder_type:int day_of_week:int time_of_day:time frequency:int user_id:int 
+
+php oil g controller sendReminders
+
+php oil g controller converter
